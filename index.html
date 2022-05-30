@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
     <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <!-- we import arjs version without NFT but with marker + location based support -->
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <body style="margin : 0px; overflow: hidden;">
         <a-scene embedded arjs>
-        <a-marker preset="https://wintet.github.io/AR/pattern-CAR.png">
+        <a-marker preset="pattern">
             <a-entity
             rotation="-90 0 0"
             scale="0.1 0.1 0.1" 
             rotation="0 90 0"
             gltf-model="https://wintet.github.io/AR/dragon_glass/scene.gltf">
             <a-animatiom attribute="rotation" to="90 360 0" dur="9000" repeat="indefinite" easing="linear"></a-animation>
-            </a-entity>                                                                                     
+            </a-entity>
+            </a-marker-camera>                                                                                       
         </a-marker>
-        <a-entity camera></a-entity>
+        <a-marker-camera preset='custom' type='pattern' url='https://wintet.github.io/AR/dragon_glass/pattern-CAR_.patt'></a-marker-camera>
         </a-scene>
     </body>
 </html>
-
-
