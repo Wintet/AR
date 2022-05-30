@@ -6,9 +6,8 @@
     <body style="margin : 0px; overflow: hidden;">
         <a-scene embedded arjs>
         <!--<a-marker preset="hiro">-->
-            <a-marker-camera type="pattern patternUrl=" ">
-             <a-marker type="pattern patternUrl=" ">
-            <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
+            <a-marker-camera type="pattern" patternUrl="https://wintet.github.io/AR/pattern-CAR_.patt">
+            <a-marker type="pattern" patternUrl='https://wintet.github.io/AR/pattern-CAR_.patt'>
             <a-entity
             rotation="-90 0 0"
             scale="0.1 0.1 0.1" 
@@ -16,8 +15,8 @@
             gltf-model="https://wintet.github.io/AR/dragon_glass/scene.gltf">
             <a-animatiom attribute="rotation" to="90 360 0" dur="9000" repeat="indefinite" easing="linear"></a-animation>
             </a-entity>
+            </a-marker>
             </a-marker-camera>                                                                                       
-        </a-marker>
         <a-entity camera></a-entity>
         </a-scene>
     </body>
